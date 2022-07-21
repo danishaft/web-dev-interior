@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0px 80px;
+    background: #181719;
+    color:#FFFFFF;
+}
+.hamburger {
+    display: none;
+    z-index: 100;
+    padding: 5px;
+    border: none;
+    background: #181719;
+    cursor: pointer;
+    transition: transform 0.5s;
+    color: #FFFFFF;
+  }
+  
+  .closeIcon {
+    display: none;
+  }
+  
+  .showMenu {
+    transform: translateX(0);
+  }
+
+header{
+    padding: 65px 0px;
+    top: 0;
+    position: sticky;
+    background-color: #181719;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.active{
+    font-weight: 800;
+    border-bottom: 3px solid #FFFFFF;
+    font-size: 20px;
+}
+.menuItem {
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 80px;
+}
+
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase; 
+    color: #FFFFFF; 
+    border: 1px solid #FFFFFF;
+    padding:  9px;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.left-section{
+    width: 35%;
+    margin: auto;
+}
+.left-section h1 {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 61px;
+  
+}
+.left-section p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 30px 0px 30px 0px;
+}
+.read-more{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+.read-more i {
+    padding-left: 35px;
+}
+
+.right-section{
+    width: 50%;
+    z-index: -1;
+}
+.right-section .profile{
+    background: #181719;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: -4%;
+    right: 10%;
+    position: absolute;
+    padding: 10px 20px;
+    width: 30%;
+}
+.img-1{
+    position: relative;
+   
+}
+.img-1 img{
+    width: 100%;
+    height: 60vh
+}
+.profile .img-2  {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 15px;
+}
+.profile .img-2 .img-profile{
+    width: 60px;
+    height: 50px;
+    padding-right: 12px;
+}
+.img-2 .img-profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.img-2 .img-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.role{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #828282;
+}
+h5{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    width: 60%;
+}
+footer{
+    text-align: center;
+    margin-top: 200px;
+    padding: 30px 0;
+}
+
+
+
+
+
+@media (max-width:769px) {
+    .hamburger{
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        background: #181719;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .menuItem{
+        padding: 0;
+        margin: 0;
+      }
+      .closeIcon {
+        display: none;
+      }
+      
+      .showMenu {
+        transform: translateX(0%);
+      }
+    body {
+        padding: 0px 40px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-section{
+        width: 90%;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+    .right-section{
+        width: 100%;
+    }
+    .right-section .profile{
+        width: 70%;
+        margin-top: -8%;
+        right: 9%;
+    }
+    .profile .img-2  {
+        width: 70%;
+    }
+    h5{
+        width: 70%;
+    }
+    footer{
+        margin-top: 150px;
+    }
+  }
+  @media (max-width:540px) {
+    .right-section .profile{
+        margin-top: -16%;
+        right: 12%;
+    }
+    h5{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        width: 80%;
+    }
+  }
